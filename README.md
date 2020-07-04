@@ -6,6 +6,7 @@ STS-Net is a training strategy which uses MSE and KLD to distill optical flow st
 The network can avoid the use of optical flow during testing while achieving high accuracy.
 
 We release the testing and train code. 
+We have not put all the code, some code needs to be modified for better reading.
 We will add the test model as soon as possible.
 
 
