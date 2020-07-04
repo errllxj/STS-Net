@@ -124,21 +124,8 @@ if __name__=="__main__":
         print('loading checkpoint {}'.format(opt.resume_path2))
         checkpoint = torch.load(opt.resume_path2)
         model_STS.load_state_dict(checkpoint['state_dict'])
-    if opt.STS_resume_path:
-        print('loading STS checkpoint {}'.format(opt.STS_resume_path))
-        checkpoint = torch.load(opt.STS_resume_path)
-        assert opt.arch == checkpoint['arch']
-
-        opt.begin_epoch = checkpoint['epoch']
-        model_STS.load_state_dict(checkpoint['state_dict'])
-
-    #  assert opt.arch == checkpoint['arch']
-
-#        opt.begin_epoch = checkpoint['epoch']
-
-
-
     
+
     print("Initializing the optimizer ...")
         
     print("lr = {} \t momentum = {} \t dampening = {} \t weight_decay = {}, \t nesterov = {}"
